@@ -1,19 +1,56 @@
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 17px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Raleway", sans-serif;
+}
+
 @media (orientation: portrait) {
   a.navbar-brand.scroll-section {
     max-width: 175px;
   }
 }
 
+p.columns {
+  -moz-column-count: 2;
+       column-count: 2;
+  text-align: left;
+  margin-top: 50px !important;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+}
+
 @media (orientation: portrait) {
   section {
-    overflow-y: hidden;
+    overflow-x: hidden;
+    padding: 7%;
+    max-width: 100%;
   }
+}
+
+.section-heade p {
+  font-size: 17px;
+}
+
+.btn-default {
+  font-size: 18px;
+  text-transform: none;
+  letter-spacing: 1px;
+  font-weight: 800;
 }
 
 @media (orientation: landscape) {
   .appy-menu.sticky .nav.navbar-nav.navbar-right {
     margin-top: 10px;
   }
+}
+
+.appy-menu ul li a {
+  text-transform: none;
+  letter-spacing: 1px;
+  font-size: 15px;
 }
 
 @media (max-width: 1400px) {
@@ -28,35 +65,67 @@
 }
 @media (orientation: portrait) {
   #home_banner {
-    height: 70vh !important;
+    height: 75vh !important;
+    padding: 0;
   }
 }
-#home_banner .item-1 {
+#home_banner .item {
   background-image: url(../img/opt1.jpg);
   background-position: center;
 }
-#home_banner .item-1 h3 {
-  font-size: 45px;
-  line-height: 45px;
-  margin-bottom: 50px;
-}
 @media (orientation: portrait) {
-  #home_banner .item-1 h3 {
-    font-size: 36px;
-    line-height: 36px;
+  #home_banner .item .mt-200 {
+    display: none;
   }
 }
+#home_banner .item h3 {
+  letter-spacing: normal;
+  font-size: 50px;
+  line-height: 52px;
+  font-weight: 700;
+  margin-bottom: 0;
+  max-width: 90%;
+}
+@media (orientation: portrait) {
+  #home_banner .item h3 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+}
+#home_banner .item-1 {
+  background-image: url(../img/banner-1.jpg);
+}
 #home_banner .item-2 {
-  background-image: url(../img/opt2.png);
+  background-image: url(../img/banner-2.jpg);
+}
+#home_banner .item-3 {
+  background-image: url(../img/banner-3.jpg);
 }
 #home_banner p {
   font-weight: 500;
 }
+@media (orientation: portrait) {
+  #home_banner p {
+    font-size: 16px;
+  }
+}
 #home_banner img {
   display: none;
 }
+#home_banner .btn.btn-default {
+  font-family: "Raleway", sans-serif;
+  text-transform: none;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 16px;
+}
+@media (orientation: portrait) {
+  #home_banner .btn.btn-default {
+    letter-spacing: 1px;
+  }
+}
 @media (min-width: 768px) and (max-width: 1400px) {
-  #home_banner a.btn {
+  #home_banner .btn.btn-default {
     display: none;
   }
 }
@@ -65,10 +134,9 @@
     margin-top: 50px;
   }
 }
-
 @media (orientation: portrait) {
-  .home-slider .btn.btn-default {
-    letter-spacing: 1px;
+  #home_banner .owl-dots {
+    bottom: 0 !important;
   }
 }
 
@@ -82,14 +150,15 @@
   margin: 0;
   margin: 20px 0;
 }
-#about p {
+#about .about-box p {
   margin-bottom: 20px;
+  font-weight: 500;
 }
-#about .btn {
+#about .about-box .btn {
   font-weight: 700;
 }
 @media (orientation: portrait) {
-  #about .btn {
+  #about .about-box .btn {
     letter-spacing: 1px;
   }
 }
@@ -125,8 +194,10 @@
   margin: auto;
   transition: all 0.3s;
   font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 5px;
+  text-transform: none;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 18px;
 }
 #about .row.bullets a.btn:hover {
   background: #e61e29;
@@ -136,6 +207,22 @@
   #varejo {
     padding-top: 200px;
   }
+}
+@media (orientation: portrait) {
+  #varejo {
+    overflow-x: hidden;
+    padding: 7% 7% 0 7%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+#varejo h3 {
+  color: #2a3b71;
+  margin: 0;
+  text-transform: none;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 0;
 }
 @media (orientation: portrait) {
   #varejo h3 {
@@ -149,16 +236,37 @@
 #varejo2 {
   padding-bottom: 100px;
 }
+@media (orientation: portrait) {
+  #varejo2 {
+    overflow-x: hidden;
+    padding: 7%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+#varejo2 img {
+  width: 100%;
+}
+@media (orientation: portrait) {
+  #varejo2 img {
+    margin-bottom: 40px;
+  }
+}
 #varejo2 ul {
   margin: 0 0 80px 0;
   padding: 0 0 0 20px;
   list-style-type: square;
 }
 #varejo2 ul li {
-  margin: 15px 0;
+  margin: 18px 0;
 }
 #varejo2 a.btn {
   letter-spacing: 1px;
+}
+@media (orientation: portrait) {
+  #varejo2 a.btn {
+    font-size: 14px;
+  }
 }
 
 @media (orientation: portrait) {
@@ -166,33 +274,72 @@
     padding-bottom: 100px;
   }
 }
+#features.industria h2 {
+  color: #fff;
+}
+#features.industria h3 {
+  margin: 0;
+  text-transform: none;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
 @media (orientation: portrait) {
   #features.industria h3 {
     font-size: 32px;
   }
 }
+@media (orientation: portrait) {
+  #features.industria h3 {
+    font-size: 32px;
+  }
+}
+#features.industria p {
+  margin-bottom: 20px;
+}
+#features.industria .single-feature .features-details p {
+  font-size: 17px;
+}
 #features.industria .single-feature .features-icon img {
   max-width: 50px;
 }
 #features.industria .about-box p {
-  font-size: 15px;
   color: #fff;
   font-weight: 300;
   line-height: 25px;
   margin-bottom: 25px;
 }
 
+@media (orientation: portrait) {
+  #ooh-dooh {
+    padding: 7%;
+  }
+}
+@media (orientation: portrait) {
+  #ooh-dooh img {
+    margin-bottom: 40px;
+  }
+}
 #ooh-dooh .section-heade h2 {
-  text-transform: uppercase;
+  color: #2a3b71;
+  margin: 0;
+  text-transform: none;
+  font-size: 42px;
+  line-height: 42px;
+  font-weight: 700;
+  letter-spacing: 0;
 }
 @media (orientation: portrait) {
   #ooh-dooh .section-heade h2 {
     font-size: 32px;
   }
 }
+#ooh-dooh p {
+  margin-bottom: 20px;
+}
 
 .one-feature p {
-  margin: 40px 0 0 0;
+  margin: 0;
 }
 .one-feature .section-heade {
   margin-bottom: 40px;
@@ -205,13 +352,16 @@
 .one-feature .section-heade p {
   margin: 0;
 }
+.one-feature img {
+  width: 100%;
+}
 .one-feature ul {
   margin: 0;
   padding: 0 0 0 20px;
   list-style-type: square;
 }
 .one-feature ul li {
-  margin: 30px 0;
+  margin: 0 0 30px 0;
 }
 
 @media (orientation: portrait) {
@@ -225,6 +375,20 @@
   padding: 100px 0;
 }
 @media (orientation: portrait) {
+  #parceiros {
+    padding: 0 7%;
+  }
+}
+#parceiros h2 {
+  color: #2a3b71;
+  margin: 0;
+  text-transform: none;
+  font-size: 42px;
+  line-height: 42px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+@media (orientation: portrait) {
   #parceiros h2 {
     font-size: 32px;
   }
@@ -232,6 +396,11 @@
 #parceiros p {
   max-width: 850px;
   margin: auto;
+}
+@media (orientation: portrait) {
+  #parceiros img {
+    margin-bottom: 40px;
+  }
 }
 #parceiros .about p {
   margin: 30px 0;
@@ -256,7 +425,14 @@
 }
 
 #contact {
-  padding: 50px 0;
+  padding: 100px 0;
+}
+#contact h3 {
+  margin: 0;
+  text-transform: none;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 0;
 }
 @media (orientation: portrait) {
   #contact h3 {
@@ -329,12 +505,12 @@ a.wpp.desktop {
   color: #fff;
   font-weight: 700;
   text-align: center;
-  padding: 10px 0;
+  padding: 10px;
   font-size: 14px;
   display: block;
   position: fixed;
-  bottom: 25px;
-  right: 25px;
+  bottom: 15px;
+  right: 15px;
   background: -webkit-linear-gradient(-29deg, #002b73 0%, #e61e29 100%);
   background-size: auto;
   background-size: cover;
@@ -360,8 +536,8 @@ a.wpp.mobile {
   font-size: 12px;
   display: block;
   position: fixed;
-  bottom: 15px;
-  right: 15px;
+  bottom: 35px;
+  right: 35px;
   background: -webkit-linear-gradient(-29deg, #002b73 0%, #e61e29 100%);
   background-size: auto;
   background-size: cover;
@@ -391,8 +567,11 @@ a.wpp.mobile {
   position: relative;
 }
 #agencias .section-heade h3 {
-  font-size: 40px;
-  text-transform: uppercase;
+  margin: 0;
+  text-transform: none;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 0;
 }
 @media (orientation: portrait) {
   #agencias .section-heade h3 {
@@ -425,7 +604,7 @@ a.wpp.mobile {
 
 #agencias .features-wrapper .single-feature .features-details h5 {
   color: #fff;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 18px;
   margin-bottom: 25px;
 }

@@ -1,13 +1,43 @@
+body{
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+}
+
+h1, h2, h3, h4, h5{
+    font-family: 'Raleway', sans-serif;
+}
+
 a.navbar-brand.scroll-section{
     @media(orientation:portrait){
         max-width: 175px;
     }
 }
 
+p.columns{
+    column-count: 2;
+    text-align: left;
+    margin-top: 50px !important;
+    column-gap: 50px;    
+}
+
+
 section{
     @media(orientation:portrait){
-        overflow-y: hidden;
+        overflow-x: hidden;
+        padding: 7%;        
+        max-width: 100%;
     }
+}
+
+.section-heade p {   
+    font-size: 17px;
+}
+
+.btn-default {   
+    font-size: 18px;
+    text-transform: none;
+    letter-spacing: 1px;
+    font-weight: 800;
 }
 
 .appy-menu.sticky{
@@ -16,6 +46,12 @@ section{
             margin-top: 10px;
         }
     }
+}
+
+.appy-menu ul li a{
+    text-transform: none;
+    letter-spacing: 1px;
+    font-size: 15px;
 }
 
 #home_banner{    
@@ -27,33 +63,62 @@ section{
     }
 
     @media(orientation:portrait){
-        height: 70vh !important;
-    }
-    .item-1{
+        height: 75vh !important;
+        padding: 0;        
+    }    
+    .item{
         background-image: url(../img/opt1.jpg);
         background-position: center;
 
-        h3{
-            font-size: 45px;                        
-            line-height: 45px;
-            margin-bottom: 50px;
 
+        .mt-200{
             @media(orientation:portrait){
-                font-size: 36px;
-                line-height: 36px;
+                display: none;
             }
         }
+
+        h3{            
+            letter-spacing: normal;
+            font-size: 50px;
+            line-height: 52px;
+            font-weight: 700;
+            margin-bottom: 0;
+            max-width: 90%;
+
+            @media(orientation:portrait){
+                font-size: 30px;
+                line-height: 32px;
+            }            
+        }
+    }
+    .item-1{
+        background-image: url(../img/banner-1.jpg);
     }
     .item-2{
-        background-image: url(../img/opt2.png);
+        background-image: url(../img/banner-2.jpg);
+    }  
+    .item-3{
+        background-image: url(../img/banner-3.jpg);
     }    
     p{
         font-weight: 500;
+
+        @media(orientation:portrait){
+            font-size: 16px;            
+        } 
     }
     img{
         display: none;
     }
-    a.btn{
+    .btn.btn-default{
+        font-family: 'Raleway', sans-serif;
+        text-transform: none;
+        font-weight: 700;
+        letter-spacing: 2px;
+        font-size: 16px;     
+        @media(orientation:portrait){            
+            letter-spacing: 1px;
+        }
         @media(min-width:768px) and (max-width:1400px){
             display: none;
         }
@@ -64,12 +129,10 @@ section{
             margin-top: 50px;
         }
     }
-}
 
-.home-slider{
-    .btn.btn-default{
-        @media(orientation:portrait){            
-            letter-spacing: 1px;
+    .owl-dots{
+        @media(orientation:portrait){
+            bottom: 0 !important;
         }
     }
 }
@@ -85,20 +148,20 @@ section{
             margin: 0;
             margin: 20px 0;
         }
-    }
-
-    p{
-        margin-bottom: 20px;
-    }
-
-
-    .btn{
-        font-weight: 700;
-
-        @media(orientation:portrait){
-            letter-spacing: 1px;
+        p{
+            margin-bottom: 20px;
+            font-weight: 500;        
         }
-    }
+    
+    
+        .btn{
+            font-weight: 700;
+    
+            @media(orientation:portrait){
+                letter-spacing: 1px;
+            }
+        }
+    }    
 
     .row.bullets{        
         @media(orientation:landscape){
@@ -130,8 +193,10 @@ section{
             margin: auto;
             transition: all .3s;
             font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 5px;
+            text-transform: none;
+            letter-spacing: 1px;
+            font-weight: 700;
+            font-size: 18px;
 
             &:hover{
                 background: #e61e29;
@@ -144,8 +209,21 @@ section{
     @media(orientation:landscape){
         padding-top: 200px;  
     }
+    @media(orientation:portrait){
+        overflow-x: hidden;
+        padding: 7% 7% 0 7%;
+        max-width: 100%;
+        margin: 0;
+    }
 
     h3{
+        color: #2a3b71;
+        margin: 0;
+        text-transform: none;
+        font-size: 42px;
+        font-weight: 700;
+        letter-spacing: 0;
+
         @media(orientation:portrait){
             font-size: 32px;
         }
@@ -154,21 +232,41 @@ section{
     p{
         margin-bottom: 20px;
     }
+    
 }
 
 #varejo2{
     padding-bottom: 100px;
+
+    @media(orientation:portrait){
+        overflow-x: hidden;
+        padding: 7%;        
+        max-width: 100%;
+        margin: 0
+    }
+
+    img{
+        width: 100%;
+        @media(orientation:portrait){
+            margin-bottom: 40px;
+        }
+    }
+
     ul{
         margin: 0 0 80px 0;
         padding: 0 0 0 20px;
         list-style-type: square;
 
         li{
-            margin: 15px 0;
+            margin: 18px 0;
         }
     }    
     a.btn{
         letter-spacing: 1px;
+
+        @media(orientation:portrait){
+            font-size: 14px;
+        }
     }
 }
 
@@ -180,10 +278,32 @@ section{
         padding-bottom: 100px;
     }
 
-    h3{
+    h2{
+        color: #fff;
+    }
+
+    h3{                
+        margin: 0;
+        text-transform: none;
+        font-size: 42px;
+        font-weight: 700;
+        letter-spacing: 0;
+
         @media(orientation:portrait){
             font-size: 32px;
         }
+
+        @media(orientation:portrait){
+            font-size: 32px;
+        }
+    }
+
+    p{
+        margin-bottom: 20px;
+    }
+
+    .single-feature .features-details p {
+        font-size: 17px;        
     }
         
     .single-feature .features-icon img {
@@ -191,7 +311,7 @@ section{
     }
     .about-box{
         p{
-            font-size: 15px;
+            
             color: #fff;
             font-weight: 300;
             line-height: 25px;
@@ -201,9 +321,25 @@ section{
 }
 
 #ooh-dooh{
+    
+    @media(orientation:portrait){
+        padding: 7%;
+    }
+    
+    img{
+        @media(orientation:portrait){
+            margin-bottom: 40px;
+        }
+    }
     .section-heade{
         h2{
-            text-transform: uppercase;
+            color: #2a3b71;
+            margin: 0;
+            text-transform: none;
+            font-size: 42px;
+            line-height: 42px;
+            font-weight: 700;
+            letter-spacing: 0;
         
             @media(orientation:portrait){
                 font-size: 32px;
@@ -211,11 +347,15 @@ section{
             
         }
     }
+
+    p{
+        margin-bottom: 20px;
+    }
 }
 
 .one-feature {
     p{
-        margin: 40px 0 0 0;
+        margin: 0;
     }
     .section-heade {
         margin-bottom: 40px;
@@ -229,13 +369,17 @@ section{
         }
     }
 
+    img{
+        width: 100%;
+    }
+
     ul{
         margin: 0;
         padding: 0 0 0 20px;
         list-style-type: square;
 
         li{
-            margin: 30px 0;
+            margin: 0 0 30px 0;
         }
     }
 }
@@ -250,7 +394,18 @@ section{
 #parceiros{    
     padding: 100px 0;
 
+    @media(orientation:portrait){        
+        padding: 0 7%;                
+    }
+
     h2{
+        color: #2a3b71;
+        margin: 0;
+        text-transform: none;
+        font-size: 42px;
+        line-height: 42px;
+        font-weight: 700;
+        letter-spacing: 0;
         @media(orientation:portrait){
             font-size: 32px;
         }
@@ -259,6 +414,12 @@ section{
     p{
         max-width: 850px;
         margin: auto;
+    }
+
+    img{
+        @media(orientation:portrait){
+            margin-bottom: 40px;
+        }
     }
 
     .about{
@@ -293,9 +454,14 @@ section{
 }
 
 #contact{
-    padding: 50px 0;
+    padding: 100px 0;
 
     h3{
+        margin: 0;
+        text-transform: none;
+        font-size: 42px;
+        font-weight: 700;
+        letter-spacing: 0;
         @media(orientation:portrait){
             font-size: 32px;
         }
@@ -378,12 +544,12 @@ a.wpp.desktop {
     color: #fff;
     font-weight: 700;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px;
     font-size: 14px;
     display: block;
     position: fixed;
-    bottom: 25px;
-    right: 25px;
+    bottom: 15px;
+    right: 15px;
     //background: #00d45e url(img/btn-wpp-mobile.png) center no-repeat;
     background: -webkit-linear-gradient( -29deg, #002b73 0%, #e61e29 100%);
     background-size: auto;
@@ -411,8 +577,8 @@ a.wpp.desktop {
     font-size: 12px;
     display: block;
     position: fixed;
-    bottom: 15px;
-    right: 15px;
+    bottom: 35px;
+    right: 35px;
     //background: #00d45e url(img/btn-wpp-mobile.png) center no-repeat;
     background: -webkit-linear-gradient( -29deg, #002b73 0%, #e61e29 100%);
     background-size: auto;
@@ -449,8 +615,11 @@ a.wpp.desktop {
 #agencias {
     position: relative;
     .section-heade h3{
-        font-size: 40px;
-        text-transform: uppercase;
+        margin: 0;
+            text-transform: none;
+            font-size: 42px;
+            font-weight: 700;
+            letter-spacing: 0;
 
         
             @media(orientation:portrait){
@@ -485,7 +654,7 @@ a.wpp.desktop {
 
 #agencias .features-wrapper .single-feature .features-details h5 {
     color: #fff;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 18px;
     margin-bottom: 25px;
 }
